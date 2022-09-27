@@ -8,7 +8,7 @@ productos.forEach(producto => {
                     <img src="${producto.img}">
           </div>
           <div class="card-footer">
-                    <button class="card-btnComprar">Agregar al carrito<span class="material-symbols-outlined cart-btn">
+                    <button class="card-btnComprar">Agregar al carrito<span class="material-symbols-outlined carrito-btn-comprar">
                     add_shopping_cart
                     </span></button>
                     <div class="card-desc">
