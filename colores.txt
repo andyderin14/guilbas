@@ -1,0 +1,17 @@
+Color Guilbas
+
+#d11c1e --- color rojo
+
+#b8261a --- color rojo oscurito
+
+#5e1813 --- color rojo oscuro
+
+Degradado --- background-image: linear-gradient(to right, #d11c1e, #a9191c, #811619, #5b1314, #380e0b);
+
+DEGRADADO --- background-image: linear-gradient(to right, #d11c1e, #cc1f1d, #c7211c, #c3221c, #be241b, #b4231a, #ab231a, #a12219, #902018, #7f1d17, #6e1b15, #5e1813);
+
+degradado - (oscuro) - background-image: linear-gradient(to right, #d11c1e, #ba1d1c, #a41d1a, #8e1c18, #791b16, #6a1915, #5c1613, #4e1411, #42110f, #360e0b, #2b0a06, #210300);
+
+degradado - (tranqui) - background: linear-gradient(90deg, #d11c1e, #c01d1d, #af1d1b, #9e1d1a, #8d1c18, #7d1b17, #6d1a15, #5e1813);
+
+degradado - (claro) - background: linear-gradient(105deg, #d11c1e, #ce1c1e, #c61c1d, #bb1d1c, #ad1d1b, #9e1d1a, #8e1c18, #7f1b17, #721a15, #671914, #611813, #5e1813);
