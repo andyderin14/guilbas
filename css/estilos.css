@@ -46,6 +46,7 @@ header {
 #contador-carrito {
           font-size: 40px;
 }
+
 #card-container {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -116,3 +117,25 @@ header {
           display: flex;
           flex-flow: wrap;
 }
+
+
+
+.modal-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background-color: rgb(233, 220, 220);
+        width: 100%;
+        height: 100vh;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        border-radius: 10px;
+        z-index: 100;
+      }
+
+      .modal-active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 5;
+      }

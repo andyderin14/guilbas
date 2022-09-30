@@ -8,7 +8,7 @@ productos.forEach(producto => {
                     <img src="${producto.img}">
           </div>
           <div class="card-footer">
-                    <button class="card-btnComprar">Agregar al carrito<span class="material-symbols-outlined carrito-btn-comprar">
+                    <button class="card-btnComprar" id="agregar${producto.id}">Agregar al carrito<span class="material-symbols-outlined carrito-btn-comprar">
                     add_shopping_cart
                     </span></button>
                     <div class="card-desc">
@@ -26,4 +26,12 @@ productos.forEach(producto => {
           </div>
           `;
           contenedor.appendChild(div);
+
+          const btn = document.getElementById(`agregar${producto.id}`)
+          btn.addEventListener('click', () => {
+                    carritoIndex(producto.id);
+                    alert(`Se agrego el producto: ${producto.nombre}.`);
+          })
 });
+
+const verCarrito = document.getElementById("carrito-btn");
