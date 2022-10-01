@@ -133,8 +133,6 @@ header {
 .modal-container {
   margin: 15px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   top: 0;
   position: fixed;
   background-color: white;
@@ -198,10 +196,12 @@ header {
   border: 1px solid #5e1813;
 }
 
-#modal-cerrar {
+.modal-header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+}
+
+#modal-cerrar {
   box-shadow: 1px 1px 3px 1px #5e1813;
   border: 1px solid #5e1813;
   background-color: #d11c1e;
