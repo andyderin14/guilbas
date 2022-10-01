@@ -1,8 +1,7 @@
-
-
 const carritoCompras = []
 
 const contenedorCarrito = document.getElementById('carrito-contenedor');
+const contadorCarrito = document.getElementById('contador-carrito');
 
 const agregarAlCarrito = (productoId) => {
           const item = stockProductos.find((producto) => producto.id === productoId);
@@ -29,6 +28,8 @@ const actualizarCarrito = () => {
                     `
                     contenedorCarrito.appendChild(div);
           });
+
+          contadorCarrito.innerText = carritoCompras.length;
 }
 
 const eliminarDelCarrito = (productoId) => {
