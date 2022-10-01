@@ -1,6 +1,6 @@
-const contenedor = document.getElementById('card-container');
+const contenedorProductos = document.getElementById('card-container');
 
-productos.forEach(producto => {
+stockProductos.forEach(producto => {
           const div = document.createElement('div');
           div.classList.add('card');
           div.innerHTML += `
@@ -25,11 +25,11 @@ productos.forEach(producto => {
                     </div>
           </div>
           `;
-          contenedor.appendChild(div);
+          contenedorProductos.appendChild(div);
 
           const btn = document.getElementById(`agregar${producto.id}`)
           btn.addEventListener('click', () => {
-                    carritoIndex(producto.id);
+                    agregarAlCarrito(producto.id);
                     alert(`Se agrego el producto: ${producto.nombre}.`);
           })
 });
