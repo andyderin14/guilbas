@@ -71,6 +71,8 @@ header {
   text-align: center;
   background-color: white;
   object-fit: cover;
+  position: relative;
+  height: 625px;
 }
 
 .card-header img {
@@ -118,6 +120,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .card-logo img {
@@ -217,4 +221,27 @@ header {
   cursor: pointer;
   background-color: white;
   color: #d11c1e;
+}
+
+.modal-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-logo img {
+  width: 50px;
+  margin: 1rem 1rem 1rem 0;
+  object-fit: cover;
+}
+
+.modal-logo-texto {
+  font-weight: bold;
+}
+
+.modal-carritoCompras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
