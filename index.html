@@ -2,54 +2,63 @@
 <html lang="en">
 
 <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <!-- Enlace a foto Guilbas svg navegador -->
-          <link rel="shortcut icon" href="./img/guilbas_logo-remove-sin fondo.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Enlace a foto Guilbas svg navegador -->
+  <link rel="shortcut icon" href="./img/guilbas_logo-remove-sin fondo.png">
 
 
-          <title>Guilbas Urban Wear</title>
+  <title>Guilbas Urban Wear</title>
 
 
-          <!-- Enlace a tipografía Barlow Semi Condensed -->
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
-          <!-- Enlace a ícono carrito de font Google -->
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-          <!--Vinculación CSS -->
-          <link rel="stylesheet" href="./css/estilos.css">
+  <!-- Enlace a tipografía Barlow Semi Condensed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+  <!-- Enlace a ícono carrito de fonts Google -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Enlace a ícono cerrar de fonts Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!--Vinculación CSS -->
+  <link rel="stylesheet" href="./css/estilos.css">
 </head>
 
 <body>
 
-          <header>
-                    <img class="logoGuilbas-header" src="./img/logo_guilbas_urbar_wear-sin_fondo.png"
-                              alt="logoGuilbasBody" height="50" width="50">
-                    <button class="carrito-btn" id="carrito-modal"><span class="material-symbols-outlined">shopping_cart</span><span id="contador-carrito">0</span></button>
-          </header>
+  <header>
+    <img class="logoGuilbas-header" src="./img/logo_guilbas_urbar_wear-sin_fondo.png" alt="logoGuilbasBody" height="50"
+      width="50">
+    <button class="carrito-btn" id="carrito-modal"><span class="material-symbols-outlined">shopping_cart</span><span
+        id="contador-carrito">0</span></button>
+  </header>
 
 
 
-          <main id="card-container">
-          </main>
+  <main id="card-container">
+  </main>
 
-          <div class="modal-container" id="modal-container">
-            <div class="modal-carrito">
-                <h3>Carrito</h3>
-                <button id="modal-cerrar">Cerrar</button>
-            <div id="carrito-contenedor"></div>
-        </div>
+  <div class="modal-container" id="modal-container">
+    <div class="modal-carrito">
+      <h2>Carrito de compras</h2>
+      <button id="modal-cerrar"><span class="material-symbols-outlined">cancel</span></button>
+      <div id="carrito-contenedor"></div>
+        <div class="card-logo">
+          <img src="./img/guilbas_logo-remove-sin fondo.png">
+        <div class="card-logo-texto">
+        <span>Guilbas Urban Wear</span>
+</div>
+    </div>
 
 
 
 
 
-          <script src="./stock.js"></script>
-          <script src="./carritoIndex.js"></script>
-          <script src="./modal.js"></script>
-          <script src="./app.js"></script>
+    <script src="./stock.js"></script>
+    <script src="./carritoIndex.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

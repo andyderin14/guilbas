@@ -33,5 +33,3 @@ productos.forEach(producto => {
                     alert(`Se agrego el producto: ${producto.nombre}.`);
           })
 });
-
-const verCarrito = document.getElementById("carrito-btn");

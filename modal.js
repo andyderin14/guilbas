@@ -4,5 +4,17 @@ const cerrarCarrito = document.getElementById('modal-cerrar');
 const modalCarrito = document.querySelector('.modal-carrito');
 
 abrirCarrito.addEventListener('click', () => {
-          modalContenedor.classList.toggle('modal-active');
+          modalContenedor.classList.toggle('modal-active')
 })
+
+cerrarCarrito.addEventListener('click', ()=> {
+          modalContenedor.classList.remove('modal-active')
+      })
+      
+      modalContenedor.addEventListener('click', () =>{
+          cerrarCarrito.click();
+      })
+
+      modalCarrito.addEventListener('click', (e) =>{
+          e.stopPropagation();
+      })
