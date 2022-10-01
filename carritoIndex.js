@@ -2,6 +2,7 @@ const carritoCompras = []
 
 const contenedorCarrito = document.getElementById('carrito-contenedor');
 const contadorCarrito = document.getElementById('contador-carrito');
+const precioTotal = document.getElementById('modal-precioTotal');
 
 const agregarAlCarrito = (productoId) => {
           const item = stockProductos.find((producto) => producto.id === productoId);
@@ -30,6 +31,7 @@ const actualizarCarrito = () => {
           });
 
           contadorCarrito.innerText = carritoCompras.length;
+          precioTotal.innerText = carritoCompras.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
 }
 
 const eliminarDelCarrito = (productoId) => {

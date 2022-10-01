@@ -300,3 +300,7 @@ header {
   background-color: white;
   color: #d11c1e;
 }
+
+.modal-precioTotalProductos {
+  padding-top: 10px;
+}
