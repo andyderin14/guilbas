@@ -17,6 +17,12 @@ stockProductos.forEach(producto => {
                               <h3>${producto.desc}</h3>
                               <h4>$ ${producto.precio}</h4>
                     </div>
+                    <select name="select" class="card-selectTalles">
+                              <option value="value1">TALLE S</option>
+                              <option value="value2" selected>TALLE M</option>
+                              <option value="value3">TALLE L</option>
+                              <option value="value4">TALLE XL</option>
+                              </select>
                     <div class="card-logo">
                                         <img src="${producto.imgLogo}">
                               <div class="card-logo-texto">
@@ -29,7 +35,12 @@ stockProductos.forEach(producto => {
 
           const btn = document.getElementById(`agregar${producto.id}`)
           btn.addEventListener('click', () => {
-                    agregarAlCarrito(producto.id);
+                    if (validarProductoRepetido(producto)) {
+                              producto.cantidad++;
+                    } else {
+                              agregarAlCarrito(producto.id);
+                    }
                     alert(`Se agrego el producto: ${producto.nombre}.`);
+                    actualizarCarrito();
           });
 });

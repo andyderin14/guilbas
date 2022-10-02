@@ -17,6 +17,20 @@ header {
   box-shadow: 0px 2px 3px 0px #5e1813;
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-top: 1px solid #5e1813;
+    box-shadow: 0px 3px 3px 5px #5e1813;
+}
+
+.nav-footer {
+  display: block;
+  flex-direction: column;
+}
+
 .logoGuilbas-header {
   object-fit: cover;
   width: 120px;
@@ -303,4 +317,24 @@ header {
 
 .modal-precioTotalProductos {
   padding-top: 10px;
+}
+
+
+.card-selectTalles {
+  font-family:  'Barlow Semi Condensed', sans-serif;
+  color: white;
+  background: #d11c1e;
+  box-shadow: 1px 1px 3px 1px #5e1813;
+  font-size: 20px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.card-selectTalles:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #d11c1e;
+}
+
+.card-selectTalles:focus {
+  outline: none;
 }
