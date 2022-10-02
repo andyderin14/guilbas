@@ -65,5 +65,5 @@ const stockProductos =
                     imgLogo: '../img/guilbas logo.png',
                     slogan: 'Guilbas Urban Wear',
                     cantidad: 1,
-          },
-]
+          }
+];

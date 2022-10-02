@@ -4,13 +4,6 @@ const contenedorCarrito = document.getElementById('carrito-contenedor');
 const contadorCarrito = document.getElementById('contador-carrito');
 const precioTotal = document.getElementById('modal-precioTotal');
 
-const agregarAlCarrito = (productoId) => {
-                    const item = stockProductos.find((producto) => producto.id === productoId);
-                    carritoCompras.push(item);
-                    actualizarCarrito();
-                    console.log(carritoCompras);
-                    }
-
 const actualizarCarrito = () => {
           contenedorCarrito.innerHTML = ""
           carritoCompras.forEach((producto) => {
@@ -39,4 +32,11 @@ const eliminarDelCarrito = (productoId) => {
           const indice = carritoCompras.indexOf(item);
           carritoCompras.splice(indice, 1);
           actualizarCarrito();
+};
+
+const agregarAlCarrito = (productoId) => {
+          const item = stockProductos.find((producto) => producto.id === productoId);
+          carritoCompras.push(item);
+          actualizarCarrito();
+          console.log(carritoCompras);
 }

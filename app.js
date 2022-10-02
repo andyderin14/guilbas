@@ -31,5 +31,5 @@ stockProductos.forEach(producto => {
           btn.addEventListener('click', () => {
                     agregarAlCarrito(producto.id);
                     alert(`Se agrego el producto: ${producto.nombre}.`);
-          })
+          });
 });
