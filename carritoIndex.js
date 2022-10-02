@@ -5,19 +5,11 @@ const contadorCarrito = document.getElementById('contador-carrito');
 const precioTotal = document.getElementById('modal-precioTotal');
 
 const agregarAlCarrito = (productoId) => {
-          const existe = carritoCompras.some((producto => producto.id === productoId));
-          if (existe) {
-                    const producto = carritoCompras.map (producto => {
-                              if (producto.id === productoId)
-                              producto.cantidad++;
-                    });
-          } else {
                     const item = stockProductos.find((producto) => producto.id === productoId);
                     carritoCompras.push(item);
+                    actualizarCarrito();
                     console.log(carritoCompras);
-}
-actualizarCarrito();
-}
+                    }
 
 const actualizarCarrito = () => {
           contenedorCarrito.innerHTML = ""
