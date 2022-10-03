@@ -75,7 +75,7 @@ footer {
 #card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(200px, auto);
+  grid-auto-rows: minmax(250px, auto);
   gap: 20px;
   padding: 20px;
   grid-auto-flow: dense;
@@ -90,25 +90,36 @@ footer {
   background-color: white;
   object-fit: cover;
   position: relative;
-  height: 625px;
+  height: 560px;
 }
 
 .card-header img {
   border-bottom: 1px solid #5e1813;
   border-radius: 5px 5px 0 0;
-  height: 320px;
+  height: 270px;
   width: 100%;
 }
 
+.card-body-btnComprar {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
 .card-btnComprar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   color: white;
   background-color: #d11c1e;
+  font-size: 15px;
   font-weight: bold;
   font-family: 'Barlow Semi Condensed', sans-serif;
   box-shadow: 1px 1px 3px 1px #5e1813;
   border-radius: 2px;
-  width: 100px;
-  height: 58px;
+  width: 140px;
+  height: 40px;
+  padding-left: 5px;
   margin: 10px;
   border: none;
   transition: all .3s;
@@ -130,19 +141,20 @@ footer {
   outline: none;
 }
 
-.card-footer {
-  padding: 0 1rem;
+.card-body {
+  padding: 0 10px;
 }
 
-.card-logo {
+.card-footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  padding-left: 35px;
   bottom: 0;
+  position: absolute;
 }
 
-.card-logo img {
+.card-footer img {
   width: 50px;
   margin: 1rem 1rem 1rem 0;
   object-fit: cover;
@@ -333,6 +345,7 @@ footer {
   border: none;
   border-radius: 3px;
   font-weight: bold;
+  margin-top: 10px;
   transition: all .3s;
 }
 .card-selectTalles:hover {

@@ -36,8 +36,8 @@ const stockProductos =
           {
                     id: 4,
                     estacion: 'Invierno',
-                    nombre: 'Campera de abrigo',
-                    desc: 'Doble polar, capucha y bolsillo interno',
+                    nombre: 'Campera',
+                    desc: 'Impermeable, doble polar, capucha y bolsillo interno',
                     precio: 15000,
                     img: 'img/camperaDeAbrigo.jpg',
                     imgLogo: 'img/guilbas logo.png',
@@ -58,8 +58,8 @@ const stockProductos =
           {
                     id: 6,
                     estacion: 'Invierno',
-                    nombre: 'Jogging de frisa',
-                    desc: 'Pantalón cómodo para tu día a día',
+                    nombre: 'Jogging',
+                    desc: 'Pantalón de frisa cómodo para todos los días',
                     precio: 5500,
                     img: 'img/joggingDeFrisa.jpg',
                     imgLogo: 'img/guilbas logo.png',
