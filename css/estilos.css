@@ -10,7 +10,7 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
   border-bottom: 1px solid #5e1813;
@@ -19,7 +19,7 @@ header {
 
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: white;
     border-top: 1px solid #5e1813;
@@ -29,6 +29,10 @@ footer {
 .nav-footer {
   display: block;
   flex-direction: column;
+}
+
+.nav-footer a {
+  padding: 5px;
 }
 
 .logoGuilbas-header {
@@ -326,13 +330,17 @@ footer {
   background: #d11c1e;
   box-shadow: 1px 1px 3px 1px #5e1813;
   font-size: 20px;
+  border: none;
   border-radius: 3px;
   font-weight: bold;
+  transition: all .3s;
 }
 .card-selectTalles:hover {
   cursor: pointer;
   background-color: white;
   color: #d11c1e;
+  border: none;
+  font-weight: bold;
 }
 
 .card-selectTalles:focus {
