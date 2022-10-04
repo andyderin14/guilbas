@@ -359,3 +359,7 @@ footer {
 .card-selectTalles:focus {
   outline: none;
 }
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
