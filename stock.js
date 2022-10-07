@@ -67,3 +67,9 @@ const stockProductos =
                     cantidad: 1,
           }
 ];
+
+let arrayCategorias = stockProductos;
+// crearDivsProductos(stockProductos);
+agregarEventoCategorias();
+filtrarPorCategorias();
+agregarEventoReestablecer();
