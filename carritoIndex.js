@@ -1,15 +1,15 @@
-const carritoCompras = []
+let carritoCompras = []
 
 const contenedorCarrito = document.getElementById('carrito-contenedor');
 const contadorCarrito = document.getElementById('contador-carrito');
 const precioTotal = document.getElementById('modal-precioTotal');
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     if (localStorage.getItem('stockCarrito')){
-//         carrito = JSON.parse(localStorage.getItem('stockCarrito'))
-//         actualizarCarrito();
-//     }
-// })
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('stockCarrito')) {
+        carritoCompras = obtenerLocalStorage();
+        actualizarCarrito();
+    }
+});
 
 const actualizarCarrito = () => {
           contenedorCarrito.innerHTML = ""
@@ -65,8 +65,6 @@ const validarProductoRepetido = (p) => {
           }
 };
 
-
-
 const guardarLocalStorage = (carritoCompras) => {
     localStorage.setItem('stockCarrito', JSON.stringify(carritoCompras));
 };
@@ -75,10 +73,3 @@ const obtenerLocalStorage = () => {
     const carritoStorage = JSON.parse(localStorage.getItem('stockCarrito'));
     return carritoStorage;
 };
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('stockCarrito')) {
-        carritoCompras = obtenerLocalStorage();
-        stockProductos(carritoCompras);
-    }
-});

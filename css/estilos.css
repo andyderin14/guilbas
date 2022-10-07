@@ -276,7 +276,6 @@ footer {
   font-size: 30px;
 }
 
-
 .btn-eliminar {
   box-shadow: 1px 1px 3px 1px #5e1813;
   border: 1px solid #5e1813;
@@ -335,7 +334,6 @@ footer {
   padding-top: 10px;
 }
 
-
 .card-selectTalles {
   font-family:  'Barlow Semi Condensed', sans-serif;
   color: white;
@@ -364,23 +362,6 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #filtroProductos {
   display: flex;
   align-items: center;
@@ -389,16 +370,16 @@ a:-webkit-any-link {
   font-family:  'Barlow Semi Condensed', sans-serif;
   }
 
-  #filtroTitulo {
-    font-size: 40px;
-    padding-bottom: 10px;
-  }
+#filtroTitulo {
+  font-size: 40px;
+  padding-bottom: 10px;
+}
 
 #filtroIdFiltrar {
   margin-left: 8px;
   width: 64px;
+  text-align: center;
 }
-
 
 #filtroIdFiltrar, #filtroIdReestablecer {
     font-family:  'Barlow Semi Condensed', sans-serif;
@@ -443,15 +424,11 @@ input:hover {
   accent-color: #d11c1e;
 }
 
-
-
 form {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-
 
 @media screen and (max-width: 1199px) {
   #filtroProductos {
