@@ -4,6 +4,13 @@ const contenedorCarrito = document.getElementById('carrito-contenedor');
 const contadorCarrito = document.getElementById('contador-carrito');
 const precioTotal = document.getElementById('modal-precioTotal');
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     if (localStorage.getItem('stockCarrito')){
+//         carrito = JSON.parse(localStorage.getItem('stockCarrito'))
+//         actualizarCarrito();
+//     }
+// })
+
 const actualizarCarrito = () => {
           contenedorCarrito.innerHTML = ""
           let cantidadCarrito = 0;
@@ -23,6 +30,9 @@ const actualizarCarrito = () => {
                     `
                     contenedorCarrito.appendChild(div);
                     cantidadCarrito += producto.cantidad;
+
+                    // Guardo el local Storage
+                    guardarLocalStorage(carritoCompras);
           });
 
           contadorCarrito.innerText = cantidadCarrito;
@@ -33,12 +43,15 @@ const eliminarDelCarrito = (productoId) => {
           const item = carritoCompras.find((producto) => producto.id === productoId);
           const indice = carritoCompras.indexOf(item);
           carritoCompras.splice(indice, 1);
+          guardarLocalStorage(carritoCompras);
           actualizarCarrito();
+
 };
 
 const agregarAlCarrito = (productoId) => {
           const item = stockProductos.find((producto) => producto.id === productoId);
           carritoCompras.push(item);
+          guardarLocalStorage(carritoCompras);
           actualizarCarrito();
           console.log(carritoCompras);
 };
@@ -51,3 +64,21 @@ const validarProductoRepetido = (p) => {
               return false;
           }
 };
+
+
+
+const guardarLocalStorage = (carritoCompras) => {
+    localStorage.setItem('stockCarrito', JSON.stringify(carritoCompras));
+};
+
+const obtenerLocalStorage = () => {
+    const carritoStorage = JSON.parse(localStorage.getItem('stockCarrito'));
+    return carritoStorage;
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('stockCarrito')) {
+        carritoCompras = obtenerLocalStorage();
+        stockProductos(carritoCompras);
+    }
+});
