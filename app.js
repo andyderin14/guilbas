@@ -38,14 +38,13 @@ function mostrarProductos () {
                     </div>
                     `;
                     contenedorProductos.appendChild(div);
-          
+
                     const btn = document.getElementById(`agregar${producto.id}`)
                     btn.addEventListener('click', () => {
-                              if (validarProductoRepetido(producto)) {
-                                        producto.cantidad++;
-                              } else {
-                                        agregarAlCarrito(producto.id);
-                              }
+
+                              // Operador ternario // Operador++
+                              validarProductoRepetido(producto) ? producto.cantidad++ : agregarAlCarrito(producto.id);
+
                               alert(`Se agrego el producto: ${producto.nombre}.`);
                               actualizarCarrito();
                     });

@@ -29,6 +29,8 @@ const actualizarCarrito = () => {
                               </div>
                     `
                     contenedorCarrito.appendChild(div);
+
+                    // Operador++
                     cantidadCarrito += producto.cantidad;
 
                     // Guardo el local Storage
@@ -44,6 +46,9 @@ const eliminarDelCarrito = (productoId) => {
           const indice = carritoCompras.indexOf(item);
           carritoCompras.splice(indice, 1);
           guardarLocalStorage(carritoCompras);
+
+          // Operador lógico AND
+          carritoCompras.length === 0 && alert('El carrito de compras quedó vacío.');
           actualizarCarrito();
 
 };

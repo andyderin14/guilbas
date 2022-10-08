@@ -24,4 +24,5 @@ botonVaciarCarrito.addEventListener('click', () => {
     carritoCompras.length = 0;
     guardarLocalStorage(carritoCompras);
     actualizarCarrito();
+    alert('El carrito de compras quedó vacío.');
 });

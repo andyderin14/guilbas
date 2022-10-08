@@ -78,3 +78,16 @@ let stockProductos =
           ];
 
 let productosFiltrados = stockProductos;
+
+// Spread de objetos // Desestructuración
+
+const talles = { talle1: 'S', talle2: 'M', talle3: 'L', talle4: 'XL', talleEspecial: {talle6:'XXXL'}};
+
+const { talle1, talle2, talle3, talle4, talleEspecial: {talle6} } = talles;
+
+const stockTalles = {talle1, talle2, talle3, talle4};
+
+const stockTallesFinal = {talle0: 'XS', ...stockTalles, talle5: 'XXL'};
+
+console.log(stockTallesFinal);
+console.log('Talle especial: "' + talle6 + '".');
