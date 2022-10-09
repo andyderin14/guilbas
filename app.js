@@ -45,7 +45,16 @@ function mostrarProductos () {
                               // Operador ternario // Operador++
                               validarProductoRepetido(producto) ? producto.cantidad++ : agregarAlCarrito(producto.id);
 
-                              alert(`Se agrego el producto: ${producto.nombre}.`);
+                              Swal.fire({
+                                        title: 'Felicidades!',
+                                        text: `Se agrego el producto: ${producto.nombre} con éxito.`,
+                                        imageUrl: `${producto.img}`,
+                                        icon: 'success',
+                                        imageWidht: '150',
+                                        imageHeight: '150',
+                                        confirmButtonColor: '#d11c1e',
+                                        imageAlt: 'Custon image',
+                              });
                               actualizarCarrito();
                     });
           });

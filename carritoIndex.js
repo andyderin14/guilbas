@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const actualizarCarrito = () => {
-          contenedorCarrito.innerHTML = ""
-          let cantidadCarrito = 0;
-          carritoCompras.forEach((producto) => {
-                    const div = document.createElement('div');
-                    div.classList.add('productoEnCarrito');
+    contenedorCarrito.innerHTML = ""
+    let cantidadCarrito = 0;
+    carritoCompras.forEach((producto) => {
+        const div = document.createElement('div');
+        div.classList.add('productoEnCarrito');
 
-                    div.innerHTML = `
+        div.innerHTML = `
                                         <img class="carrito-img" src="${producto.img}">
                                                   <div class="class="carrito-contenido">
                                                             <p>${producto.nombre}</p>
@@ -28,46 +28,69 @@ const actualizarCarrito = () => {
                                                   </div>
                               </div>
                     `
-                    contenedorCarrito.appendChild(div);
+        contenedorCarrito.appendChild(div);
 
-                    // Operador++
-                    cantidadCarrito += producto.cantidad;
+        // Operador++
+        cantidadCarrito += producto.cantidad;
 
-                    // Guardo el local Storage
-                    guardarLocalStorage(carritoCompras);
-          });
+        // Guardo el local Storage
+        guardarLocalStorage(carritoCompras);
+    });
 
-          contadorCarrito.innerText = cantidadCarrito;
-          precioTotal.innerText = carritoCompras.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
+    contadorCarrito.innerText = cantidadCarrito;
+    precioTotal.innerText = carritoCompras.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
 }
 
 const eliminarDelCarrito = (productoId) => {
-          const item = carritoCompras.find((producto) => producto.id === productoId);
-          const indice = carritoCompras.indexOf(item);
-          carritoCompras.splice(indice, 1);
-          guardarLocalStorage(carritoCompras);
+    Swal.fire({
+        title: 'Estas seguro?',
+        icon: 'warning',
+        text: 'El producto se eliminará del carrito.',
+        showCancelButton: true,
+        confirmButtonColor: '#d11c1e',
+        cancelButtonColor: '#424242',
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.isConfirmed) {
 
-          // Operador lógico AND
-          carritoCompras.length === 0 && alert('El carrito de compras quedó vacío.');
-          actualizarCarrito();
-
+            const item = carritoCompras.find((producto) => producto.id === productoId);
+            const indice = carritoCompras.indexOf(item);
+            carritoCompras.splice(indice, 1);
+            Swal.fire({
+                title: 'Eliminado',
+                text: 'El producto ha sido eliminado con éxito del carrito.',
+                icon: 'success',
+                confirmButtonColor: '#d11c1e',
+            });
+            actualizarCarrito();
+        }
+        guardarLocalStorage(carritoCompras);
+        // Operador lógico AND
+        carritoCompras.length === 0 && Swal.fire({
+            text: 'El carrito de compras está vacío.',
+            icon: 'info',
+            confirmButtonColor: '#d11c1e',
+        });
+        actualizarCarrito();
+    });
 };
 
 const agregarAlCarrito = (productoId) => {
-          const item = stockProductos.find((producto) => producto.id === productoId);
-          carritoCompras.push(item);
-          guardarLocalStorage(carritoCompras);
-          actualizarCarrito();
-          console.log(carritoCompras);
+    const item = stockProductos.find((producto) => producto.id === productoId);
+    carritoCompras.push(item);
+    guardarLocalStorage(carritoCompras);
+    actualizarCarrito();
+    console.log(carritoCompras);
 };
 
 const validarProductoRepetido = (p) => {
-          const productoRepetido = carritoCompras.find(producto => producto.id === p.id);
-          if (productoRepetido) {
-              return true;
-          } else {
-              return false;
-          }
+    const productoRepetido = carritoCompras.find(producto => producto.id === p.id);
+    if (productoRepetido) {
+        return true;
+    } else {
+        return false;
+    }
 };
 
 const guardarLocalStorage = (carritoCompras) => {
