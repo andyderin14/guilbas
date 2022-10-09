@@ -430,6 +430,11 @@ form {
   justify-content: center;
 }
 
+.swal2-styled {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 1199px) {
   #filtroProductos {
     display: block;
