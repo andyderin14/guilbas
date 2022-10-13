@@ -4,6 +4,7 @@ const contenedorCarrito = document.getElementById('carrito-contenedor');
 const contadorCarrito = document.getElementById('contador-carrito');
 const precioTotal = document.getElementById('modal-precioTotal');
 
+
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('stockCarrito')) {
         carritoCompras = obtenerLocalStorage();

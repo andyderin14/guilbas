@@ -303,10 +303,14 @@ footer {
   display: block;
 }
 
+.modal-comprarProducto li{
+  list-style: none;
+}
+
 .modal-vaciarCarrito {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
   padding-top: 15px;
 }
 
@@ -325,6 +329,26 @@ footer {
 }
 
 .modal-btn-vaciarCarrito:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #d11c1e;
+}
+
+.modal-btn-comprar {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: white;
+  background: #d11c1e;
+  box-shadow: 1px 1px 3px 1px #5e1813;
+  border: 1px solid #5e1813;
+  font-size: 15px;
+  font-weight: bold;
+  width: 90px;
+  height: 22px;
+  border-radius: 3px;
+  padding-bottom: 10px;
+}
+
+.modal-btn-comprar:hover {
   cursor: pointer;
   background-color: white;
   color: #d11c1e;
@@ -433,6 +457,24 @@ form {
 .swal2-styled {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: bold;
+}
+
+/* #comprarContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px 1px #5e1813;
+      border: 1px solid #5e1813;
+} */
+
+.main-comprar {
+  min-height: 100vh;
+}
+
+.main-index {
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 1199px) {
