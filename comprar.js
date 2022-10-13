@@ -1,4 +1,5 @@
 const comprarProductos = document.getElementById('comprarProducto');
+// const volverPagInicio = document.getElementById('redireccionarPagInicio');
 
 comprarProductos.addEventListener('click', (e) => {
           e.preventDefault();
@@ -13,3 +14,8 @@ comprarProductos.addEventListener('click', (e) => {
           location.href = 'comprar.html';
           }
 });
+
+// volverPagInicio.addEventListener('click', (e) => {
+//           e.preventDefault();
+//           location.href = 'index.html';
+// });

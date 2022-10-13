@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const actualizarCarrito = () => {
-    contenedorCarrito.innerHTML = ""
+    contenedorCarrito.innerHTML = "";
     let cantidadCarrito = 0;
     carritoCompras.forEach((producto) => {
         const div = document.createElement('div');

@@ -477,6 +477,27 @@ form {
   min-height: 100vh;
 }
 
+.btnVolverPagInicio {
+  text-align: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: white;
+  background: #d11c1e;
+  box-shadow: 1px 1px 3px 1px #5e1813;
+  border: 1px solid #5e1813;
+  font-size: 25px;
+  font-weight: bold;
+  width: 90px;
+  height: 35px;
+  border-radius: 3px;
+  padding-bottom:20px;
+  cursor: pointer;
+}
+.btnVolverPagInicio:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #d11c1e;
+}
+
 @media screen and (max-width: 1199px) {
   #filtroProductos {
     display: block;
