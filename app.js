@@ -1,8 +1,9 @@
 const contenedorProductos = document.getElementById('card-container');
 
-mostrarProductos();
+mostrarProductos ();
 
 function mostrarProductos () {
+
           productosFiltrados.forEach(producto => {
                     const div = document.createElement('div');
                     div.classList.add('card');

@@ -8,17 +8,16 @@ filtrar.addEventListener('click', () => {
   let form = new FormData(formulario);
   let categoria = (form.get("categorias"));
 
-  productosFiltrados = stockProductos.filter((producto) => producto.categoria === categoria);
+  productosFiltrados.filter((producto) => producto.categoria === categoria);
   contenedorProductos.innerHTML= '';
 
-  mostrarProductos();
+  mostrarProductos ();
 
   console.log(productosFiltrados);
 
 });
 
 restablecer.addEventListener('click', () => {
-  productosFiltrados = stockProductos;
   contenedorProductos.innerHTML= '';
-  mostrarProductos();
+  mostrarProductos ();
 });
