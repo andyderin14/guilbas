@@ -5,7 +5,7 @@ const contadorCarrito = document.getElementById('contador-carrito');
 const precioTotal = document.getElementById('modal-precioTotal');
 
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     fetchData();
     if (localStorage.getItem('stockCarrito')) {
         carritoCompras = obtenerLocalStorage();
@@ -15,13 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchData = async () => {
     try {
-              const response = await fetch('./stock.json');
-              const data = await response.json();
-
-              console.log(data);
-              mostrarProductos(data);
+        const response = await fetch('./stock.json');
+        const data = await response.json();
+        console.log(data);
+        mostrarProductos(data);
     } catch (error) {
-              console.log('Ocurrió un error: ', error);
+        console.log('Ocurrió un error: ' + error);
     }
 }
 
