@@ -12,7 +12,7 @@ comprarProductos.addEventListener('click', (e) => {
           } else {
             Swal.fire({
               title: 'Gracias por tu compra.',
-              text: 'Tu cumpra se ah realizado con éxito!.',
+              text: 'Tu cumpra se ah realizado con éxito!',
               icon: 'success',
               confirmButtonColor: '#d11c1e',
           });
