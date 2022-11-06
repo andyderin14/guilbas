@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     fetchData();
     if (localStorage.getItem('stockCarrito')) {
         carritoCompras = obtenerLocalStorage();
+        console.log(carritoCompras);
         actualizarCarrito();
     }
 });
+
 
 const fetchData = async () => {
     try {

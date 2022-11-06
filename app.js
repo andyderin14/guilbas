@@ -41,7 +41,7 @@ function mostrarProductos () {
 
                     const btn = document.getElementById(`agregar${producto.id}`)
                     btn.addEventListener('click', () => {
-
+                             
                               // Operador ternario // Operador++
                               validarProductoRepetido(producto) ? producto.cantidad++ : agregarAlCarrito(producto.id);
 

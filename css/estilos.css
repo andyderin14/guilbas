@@ -187,15 +187,33 @@ footer {
 }
 
 .modal-carrito {
-  width: 280px;
-  height: 100%;
+  width: 300px;
+  height: 400px;
   padding: 15px;
   box-shadow: 1px 1px 3px 1px #5e1813;
   border: 1px solid #5e1813;
   border-radius: 10px;
   transition: all .5s;
   padding-bottom: 0;
+  overflow: auto;
 }
+
+.modal-carrito::-webkit-scrollbar {
+  width: 12px;
+}
+
+.modal-carrito::-webkit-scrollbar-thumb {
+  background: #d11c1e;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.modal-carrito::-webkit-scrollbar-thumb:hover {
+  background: #a30d0f;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
 
 .productoEnCarrito {
   border-bottom-left-radius: 3px;
@@ -486,9 +504,10 @@ form {
   border: 1px solid #5e1813;
   font-size: 25px;
   font-weight: bold;
-  width: 90px;
+  width: 100px;
   height: 35px;
   border-radius: 3px;
+  padding-right: 2px;
   padding-bottom:20px;
   cursor: pointer;
 }
@@ -497,6 +516,23 @@ form {
   background-color: white;
   color: #d11c1e;
 }
+
+.ordenCompra {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 70%;
+  text-align: center;
+}
+
+.ordenTabla {
+  width: 50%;
+  border: 1px solid #5e1813;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px #5e1813;
+  padding: 10px;
+}
+
 
 @media screen and (max-width: 1199px) {
   #filtroProductos {
