@@ -11,7 +11,7 @@ filtrar.addEventListener('click', () => {
   productosFiltrados = stockProductos.filter((producto) => producto.categoria === categoria);
   contenedorProductos.innerHTML= '';
   console.log(productosFiltrados);
-  mostrarProductos(stockProductos);
+  mostrarProductos();
 
 });
 

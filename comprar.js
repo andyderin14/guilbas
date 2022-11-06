@@ -21,5 +21,3 @@ comprarProductos.addEventListener('click', (e) => {
                 actualizarCarrito();
           }
 });
-
-const btn = document.getElementById('button');
