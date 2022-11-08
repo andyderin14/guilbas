@@ -477,16 +477,6 @@ form {
   font-weight: bold;
 }
 
-/* #comprarContainer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: 'Barlow Semi Condensed', sans-serif;
-      border-radius: 5px;
-      box-shadow: 1px 1px 3px 1px #5e1813;
-      border: 1px solid #5e1813;
-} */
-
 .main-comprar {
   min-height: 100vh;
 }
